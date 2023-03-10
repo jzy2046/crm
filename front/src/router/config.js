@@ -125,7 +125,7 @@ const options = {
             }
           },
           component: ()=>import('@/pages/analysis/index'),
-        },
+        }/*,
         {
           name: '关于创作者',
           path: 'antdv',
@@ -133,7 +133,7 @@ const options = {
             icon: 'ant-design',
             link: 'https://msy.plus'
           }
-        }
+        }*/
       ]
     },
   ]

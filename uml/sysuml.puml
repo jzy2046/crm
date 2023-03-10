@@ -1,0 +1,59 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+actor 系统管理员 as Foo1
+actor 人事专员 as Foo2
+box "系统操作" #green
+participant 部门管理 as FoolSys1
+participant 字典管理 as FoolSys2
+participant 权限管理 as FoolSys3
+participant 角色管理 as FoolSys4
+participant 管理系统用户 as FoolSys5
+participant 员工详细档案维护 as FoolSys6
+end box
+Foo1 -> FoolSys1 : 部门管理
+Foo1 -> FoolSys2 : 字典管理
+Foo1 -> FoolSys3 : 权限管理
+Foo1 -> FoolSys4 : 角色管理
+Foo2 -> FoolSys4 : 角色管理
+Foo2 -> FoolSys5 : 管理系统用户
+Foo2 -> FoolSys6 : 维护档案
+
+box "潜在客户阶段" #LightBlue
+participant 指派潜在客户 as FoolSale2
+participant 创建潜在客户 as FoolSale1
+participant 分析客户报告 as FoolSale5
+participant 记录跟进客户细节 as FoolSale4
+participant 制定客户跟进计划 as FoolSale3
+end box
+actor 市场部经理 as Foo3
+actor 市场专员 as Foo4
+Foo3 -> FoolSale3 : 跟进客户
+Foo3 -> FoolSale4 : 记录跟进细节
+Foo3 -> FoolSale5 : 查看分析报告指派潜在客户
+Foo3 -> FoolSale1 : 创建潜在客户
+Foo3 -> FoolSale2 : 指派潜在客户
+Foo4 -> FoolSale3 : 跟进客户
+Foo4 -> FoolSale4 : 记录跟进细节
+Foo4 -> FoolSale5 : 查看分析报告
+Foo4 -> FoolSale1 : 创建潜在客户
+box "正式客户" #EEEBDC
+participant 制定客户跟进计划 as FoolProSale1
+participant 记录跟进客户细节 as FoolProSale2
+participant 分析客户报告 as FoolProSale3
+end box
+
+Foo3 -> FoolProSale1 : 跟进客户
+Foo3 -> FoolProSale2 : 记录跟进细节
+Foo3 -> FoolProSale3 : 查看分析报告
+Foo4 -> FoolProSale1 : 跟进客户
+Foo4 -> FoolProSale2 : 记录跟进细节
+Foo4 -> FoolProSale3 : 查看分析报告
+
+actor 老板 as Foo5
+box "流失客户"
+participant 分析客户报告 as FoolMissSale1
+end box
+Foo5 -> FoolProSale3 : 查看分析报告
+Foo5 -> FoolSale5 : 查看分析报告
+Foo5 -> FoolMissSale1 : 查看分析报告
+@enduml

@@ -1,0 +1,33 @@
+@startuml
+component 金融CRM管理系统
+component 系统设置
+component 角色管理
+component 权限管理
+component 部门管理
+component 员工管理
+component 字典列表
+component 字典明细
+component 客户管理
+component 潜在客户管理
+component 正式客户管理
+component 客户资源池
+component 跟进历史
+component 移交历史查询
+component 统计分析
+金融CRM管理系统 --> 系统设置
+系统设置 --> 角色管理
+系统设置 --> 权限管理
+系统设置 --> 部门管理
+系统设置 --> 员工管理
+系统设置 --> 字典列表
+系统设置 --> 字典明细
+金融CRM管理系统 --> 客户管理
+客户管理 --> 潜在客户管理
+客户管理 --> 正式客户管理
+客户管理 --> 客户资源池
+客户管理 --> 跟进历史
+客户管理 --> 移交历史查询
+金融CRM管理系统 --> 统计分析
+统计分析 --> 柱状图
+统计分析 --> 饼状图
+@enduml
