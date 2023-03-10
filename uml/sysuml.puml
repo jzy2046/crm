@@ -29,7 +29,7 @@ actor 市场部经理 as Foo3
 actor 市场专员 as Foo4
 Foo3 -> FoolSale3 : 跟进客户
 Foo3 -> FoolSale4 : 记录跟进细节
-Foo3 -> FoolSale5 : 查看分析报告指派潜在客户
+Foo3 -> FoolSale5 : 查看分析报告
 Foo3 -> FoolSale1 : 创建潜在客户
 Foo3 -> FoolSale2 : 指派潜在客户
 Foo4 -> FoolSale3 : 跟进客户
