@@ -1,0 +1,37 @@
+@startuml
+entity customer_follow_up_history {
+    +id int
+    #traceTime datetime
+    traceDetails text
+    traceType int
+    traceResult int
+    customerID int
+    inputUser int
+    type int
+    comment text
+}
+entity customer_handover {
+    +id int
+    customerID int
+    transUser int
+    transTime timestamp
+    oldSeller int
+    newSeller int
+    transReason varchar(255)
+}
+entity customer_manager {
+    +id int
+    name varchar(255)
+    age int
+    gender int
+    tel varchar(255)
+    qq varchar(255)
+    job int
+    source int
+    seller int
+    inputUser int
+    inputTime timestamp
+    status int
+    positiveTime datetime
+}
+@enduml
