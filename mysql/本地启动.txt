@@ -1,0 +1,4 @@
+// 启动本地mysql 并且设置root密码为123456
+docker:docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:latest
+// 启动本地redis 并且设置密码为123456
+redis:docker run -itd --name redis-6379 -p 6379:6379 redis --requirepass 123456
